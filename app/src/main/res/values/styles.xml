@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.NgabuburitTravelApp" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimaryDark">@color/dark</item>
+        <item name="colorTertiary">@color/dark_secondary</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/secondary</item>
+        <item name="colorSecondary">@color/white_500</item>
+        <item name="colorSecondaryVariant">@color/white_600</item>
+        <item name="colorSecondaryContainer">@color/white_500</item>
+    </style>
+</resources>

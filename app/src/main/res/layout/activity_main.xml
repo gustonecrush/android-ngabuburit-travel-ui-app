@@ -1,18 +1,805 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/dark"
+    tools:context=".MainActivity"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:scrollbars="none"
+        android:fillViewport="true"
+        >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="70sp"
+            >
+
+            <!--  Header Section  -->
+            <RelativeLayout
+                android:id="@+id/header_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="30sp"
+                android:paddingTop="30sp"
+                android:layout_marginBottom="25sp"
+                >
+
+                <!--  Profile Section  -->
+                <LinearLayout
+                    android:id="@+id/profile_section"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentLeft="true"
+                    >
+
+                    <!--  Profile Picture  -->
+                    <ImageView
+                        android:layout_width="50sp"
+                        android:layout_height="50sp"
+                        android:src="@drawable/profile"
+                        />
+
+                    <!--  Detail User  -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="15sp"
+                        >
+
+                        <!--  Greeting User's Name  -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:text="Hello Farhan,"
+                            />
+
+                        <!--  Greeting to User  -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textColor="@color/white_600"
+                            android:textSize="14sp"
+                            android:text="Good Morning"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--  Search Section  -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_search"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <!--  End of Header Section  -->
+
+            <!--  Title Section  -->
+            <TextView
+                android:id="@+id/title_section"
+                android:layout_below="@id/header_section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Let’s enjoy your\nVacation"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:paddingHorizontal="30sp"
+                />
+            <!--  End of Title Section  -->
+
+            <!--  Menu Section  -->
+            <HorizontalScrollView
+                android:id="@+id/menu_section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_section"
+                android:layout_marginTop="3dp"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8sp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30sp"
+                        android:layout_marginRight="15sp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:text="All"
+                            android:textColor="@color/primary"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15sp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Asia"
+                            android:textColor="@color/white_500"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15sp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="America"
+                            android:textColor="@color/white_500"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15sp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Africa"
+                            android:textColor="@color/white_500"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15sp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Europe"
+                            android:textColor="@color/white_500"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15sp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="North America"
+                            android:textColor="@color/white_500"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+            <!--  End of Menu Section  -->
+
+            <!--  Popular Section  -->
+            <LinearLayout
+                    android:id="@+id/popular_section"
+                    android:layout_below="@id/menu_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30sp"
+                    android:layout_marginHorizontal="30sp"
+                    android:orientation="vertical"
+                    >
+
+                    <!--  Header Popular Section  -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!--  Header Popular  -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:text="Popular Countries"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            />
+
+                        <!--  See All Popular  -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="See All"
+                            android:textColor="@color/white_500"
+                            android:textSize="14sp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            />
+                    </RelativeLayout>
+
+                    <!--  Content Popular Section  -->
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:fillViewport="true"
+                        android:layout_marginTop="15sp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+
+                            <RelativeLayout
+                                android:id="@+id/destination"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/radius"
+                                android:layout_marginRight="15sp"
+                                android:backgroundTint="@color/primary"
+                                >
+
+                                <ImageView
+                                    android:id="@+id/image_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/bali" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/image_1"
+                                    android:fontFamily="@font/poppinsmedium"
+                                    android:text="See All"
+                                    android:textColor="@color/dark"
+                                    android:textSize="18sp"
+                                    android:layout_centerHorizontal="true"
+                                    />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/radius"
+                                android:layout_marginRight="15sp"
+                                android:backgroundTint="@color/primary"
+                                >
+
+                                <ImageView
+                                    android:id="@+id/image_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/paris" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/image_2"
+                                    android:fontFamily="@font/poppinsmedium"
+                                    android:text="See All"
+                                    android:textColor="@color/dark"
+                                    android:textSize="18sp"
+                                    android:layout_centerHorizontal="true"
+                                    />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/radius"
+                                android:backgroundTint="@color/primary"
+                                android:layout_marginRight="15sp"
+                                >
+
+                                <ImageView
+                                    android:id="@+id/image_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/england"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/image_3"
+                                    android:fontFamily="@font/poppinsmedium"
+                                    android:text="See All"
+                                    android:textColor="@color/dark"
+                                    android:textSize="18sp"
+                                    android:layout_centerHorizontal="true"
+                                    />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+            <!--  End of Popular Section  -->
+
+            <!--  OnGoing Event Section  -->
+            <LinearLayout
+                    android:id="@+id/ongoing_event_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/popular_section"
+                    android:layout_marginTop="30sp"
+                    android:layout_marginHorizontal="30sp"
+                    android:orientation="vertical"
+                    >
+
+                    <!--  Header OnGoing Event Section  -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!--  Header Ongoing Events  -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:text="Ongoing Events"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            />
+
+                        <!--  See All Ongoing Events  -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="See All"
+                            android:textColor="@color/white_500"
+                            android:textSize="14sp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            />
+                    </RelativeLayout>
+
+                    <!--  Content OnGoing Event Section  -->
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:fillViewport="true"
+                        android:layout_marginTop="15sp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15sp"
+                                >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/brazil"
+                                    />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/location1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppinsbold"
+                                        android:text="Rio Carnival, Rio\nde Janiro"
+                                        android:textColor="@color/white"
+                                        android:textSize="18sp"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_alignParentTop="true"
+                                        android:paddingTop="20sp"
+                                        android:paddingLeft="20sp"
+                                        />
+
+                                    <LinearLayout
+                                        android:layout_below="@id/location1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_alignParentLeft="true"
+                                        android:paddingLeft="18sp"
+                                        >
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/ic_sharp_place_24"
+                                            android:layout_gravity="center"
+                                            />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/poppinssemibold"
+                                            android:text="Brazil"
+                                            android:textColor="@color/white"
+                                            android:textSize="16sp"
+                                            android:layout_alignParentLeft="true"
+                                            android:paddingLeft="5sp"
+                                            android:layout_gravity="center"
+                                            />
+
+                                    </LinearLayout>
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15sp"
+                                >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/japan" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/location2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppinsbold"
+                                        android:text="Sapporo Snow\nFestival"
+                                        android:textColor="@color/white"
+                                        android:textSize="18sp"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_alignParentTop="true"
+                                        android:paddingTop="20sp"
+                                        android:paddingLeft="20sp"
+                                        />
+
+                                    <LinearLayout
+                                        android:layout_below="@id/location2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_alignParentLeft="true"
+                                        android:paddingLeft="18sp"
+                                        >
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/ic_sharp_place_24"
+                                            android:layout_gravity="center"
+                                            />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/poppinssemibold"
+                                            android:text="Japan"
+                                            android:textColor="@color/white"
+                                            android:textSize="16sp"
+                                            android:layout_alignParentLeft="true"
+                                            android:paddingLeft="5sp"
+                                            android:layout_gravity="center"
+                                            />
+
+                                    </LinearLayout>
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+            <!--  End of OnGoing Event Section  -->
+
+            <!--  OnGoing Event Section  -->
+            <LinearLayout
+                android:id="@+id/ongoing2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ongoing_event_section"
+                android:layout_marginTop="30sp"
+                android:layout_marginHorizontal="30sp"
+                android:orientation="vertical"
+                >
+
+                <!--  Header OnGoing Event Section  -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--  Header Ongoing Events  -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="Ongoing Events"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <!--  See All Ongoing Events  -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="See All"
+                        android:textColor="@color/white_500"
+                        android:textSize="14sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        />
+                </RelativeLayout>
+
+                <!--  Content OnGoing Event Section  -->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:fillViewport="true"
+                    android:layout_marginTop="15sp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15sp"
+                            >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/brazil"
+                                />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/location3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppinsbold"
+                                    android:text="Rio Carnival, Rio\nde Janiro"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:paddingTop="20sp"
+                                    android:paddingLeft="20sp"
+                                    />
+
+                                <LinearLayout
+                                    android:layout_below="@id/location3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_alignParentLeft="true"
+                                    android:paddingLeft="18sp"
+                                    >
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/ic_sharp_place_24"
+                                        android:layout_gravity="center"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppinssemibold"
+                                        android:text="Brazil"
+                                        android:textColor="@color/white"
+                                        android:textSize="16sp"
+                                        android:layout_alignParentLeft="true"
+                                        android:paddingLeft="5sp"
+                                        android:layout_gravity="center"
+                                        />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15sp"
+                            >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/japan"
+                                />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/location4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppinsbold"
+                                    android:text="Sapporo Snow\nFestival"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:paddingTop="20sp"
+                                    android:paddingLeft="20sp"
+                                    />
+
+                                <LinearLayout
+                                    android:layout_below="@id/location4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_alignParentLeft="true"
+                                    android:paddingLeft="18sp"
+                                    >
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/ic_sharp_place_24"
+                                        android:layout_gravity="center"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppinssemibold"
+                                        android:text="Japan"
+                                        android:textColor="@color/white"
+                                        android:textSize="16sp"
+                                        android:layout_alignParentLeft="true"
+                                        android:paddingLeft="5sp"
+                                        android:layout_gravity="center"
+                                        />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+            <!--  End of OnGoing Event Section  -->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--  Bottom Navigator Section  -->
+    <LinearLayout
+        android:id="@+id/bottom_navigator_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/dark_secondary"
+        android:orientation="horizontal"
+        android:paddingVertical="5sp"
+        android:paddingHorizontal="15sp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30sp"
+            android:layout_marginLeft="30sp"
+            android:paddingHorizontal="18sp"
+            android:paddingVertical="20sp"
+            android:src="@drawable/home" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30sp"
+            android:paddingHorizontal="15sp"
+            android:paddingVertical="20sp"
+            android:src="@drawable/notif" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30sp"
+            android:paddingHorizontal="15sp"
+            android:paddingVertical="20sp"
+            android:src="@drawable/menu" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30sp"
+            android:paddingHorizontal="15sp"
+            android:paddingVertical="20sp"
+            android:src="@drawable/setting" />
+
+    </LinearLayout>
+    <!--  End of Bottom Navigator Section  -->
+
+</RelativeLayout>
