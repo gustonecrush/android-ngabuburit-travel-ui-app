@@ -9,6 +9,7 @@
 <a href="https://shaynakit.com/details/ngabuburit-travel-app" target="_blank">Click here to view the designs.</a>
 <p>by Shaynakit.com</p>
 
+
 ### Mockup
 <div style="display: flex">
   <img src="https://i.postimg.cc/pVqQjRpk/Screenshot-20220823-220559.png" width="230" />
